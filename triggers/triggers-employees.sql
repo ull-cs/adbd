@@ -6,7 +6,7 @@
  *   \i triggers-employees.sql
  */
 
-/* Remove all the tables in 'public'  schema */
+/* Remove all the tables in 'public' schema */
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 
@@ -73,4 +73,3 @@ SELECT * FROM "Employee_Audit";
 
 /* Show all the triggers */
 SELECT * FROM pg_trigger;
-

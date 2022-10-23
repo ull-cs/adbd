@@ -1,4 +1,4 @@
-/* Remove all the tables in 'public'  schema */
+/* Remove all the tables in 'public' schema */
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 
