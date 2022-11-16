@@ -161,3 +161,11 @@ db.collection.find({
   "cuisine": 1
 })
 ```
+15. Mostrar los restaurantes de los que se sepa la calle.
+```
+db.collection.find({
+  "address.street": {
+    $exists: true
+  }
+})
+```
