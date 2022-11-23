@@ -48,3 +48,14 @@
   purchaseMethod: "Online"
 }
 ```
+
+6. Buscar las ventas telefónicas realizadas antes del 17/05/2017 por clientes con cuentas de correo @hem.uy.
+```json
+{
+  "saleDate": {
+    $lt: ISODate("2017-05-17")
+  },
+  "purchaseMethod": "Phone",
+  "customer.email": /hem.uy/
+}
+```
