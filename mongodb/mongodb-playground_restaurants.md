@@ -1,4 +1,4 @@
-# Ejercicios MongoDB Playground - Restaurants
+# MongoDB Playground - Restaurants
 
 1. Buscar todos los restaurantes.
 ```

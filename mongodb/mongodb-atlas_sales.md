@@ -1,4 +1,4 @@
-# Ejercicios MongoDB Atlas - Sales
+# MongoDB Atlas - Sales
 
 1. Buscar las ventas realizadas a través de tiendas de Seatle.
 ```json

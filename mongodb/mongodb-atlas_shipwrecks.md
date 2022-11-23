@@ -1,4 +1,4 @@
-# Ejercicios MongoDB Atlas - Shipwrecks
+# MongoDB Atlas - Shipwrecks
 
 1. Buscar los naufragios producidos a una distancia en [1000..5000] de [-73.9667, 40.78].
 ```json
