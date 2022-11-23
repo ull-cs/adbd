@@ -1,4 +1,4 @@
-# Ejercicios MongoDB
+# Ejercicios MongoDB Playground
 
 1. Buscar todos los restaurantes.
 ```
@@ -103,7 +103,7 @@ db.collection.find({
   ]
 })
 ```
-11. Buscar los restaurantes que no preparan comida americana, que al alcanzado una puntuación 'A' y que no se encuentran en Brooklyn.
+11. Buscar los restaurantes que no preparan comida americana, que han alcanzado una puntuación 'A' y que no se encuentran en Brooklyn.
 ```
 db.collection.find({
   "cuisine": {
@@ -124,7 +124,7 @@ db.collection.find(
         "name":1,"borough":1,
         "cuisine" :1
     }
-);
+)
 ```
 
 13. Mostrar restaurantes que se encuentren en el Bronx y que preparen comida americana o china.
