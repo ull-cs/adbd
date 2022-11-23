@@ -10,7 +10,7 @@
 2. Buscar las ventas realizadas a hombres.
 ```json
 {
-  "customer.gender": "H",
+  "customer.gender": "M",
 }
 ```
 
@@ -18,19 +18,33 @@
 ```json
 {
   "storeLocation": "Austin",
-  "customer.gender": "M",
+  "customer.gender": "F",
   "customer.age": {
     $gt: 50
   }
 }
 ```
 
-4. Buscar las ventas de notepads por un precio inferior a 100 dólares.
+4. Buscar las ventas de 2 productos donde uno sea un notepad por un precio inferior a 100 dólares.
 ```json
-{
+{ 
+  "items": {
+    $size: 2
+  },
   "items.name": "notepad",
   "items.price": {
     $gt: 100
   }
+}
+```
+
+5. Buscar las ventas online realizadas entre el 01/03/2015 y el 17/05/2017. Revise el formato ISODate de MongoDB para esto.
+```json
+{
+  saleDate: {
+    $gte: ISODate("2015-03-01"),
+    $lt: ISODate("2017-05-17")
+  },
+  purchaseMethod: "Online"
 }
 ```
