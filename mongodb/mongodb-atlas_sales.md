@@ -115,3 +115,14 @@ Sort:
   "saleDate": 1
 }
 ```
+
+10. Añadir un índice a cada una de las ventas realizadas. Revise el operador `unwind` de MongoDB.
+
+Unwind:
+```json
+{
+  path: "$items",
+  includeArrayIndex: "itemIndex",
+  preserveNullAndEmptyArrays: true
+}
+```
