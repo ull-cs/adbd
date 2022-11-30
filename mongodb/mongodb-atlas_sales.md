@@ -59,3 +59,59 @@
   "customer.email": /hem.uy/
 }
 ```
+
+7. Buscar las ventas con algún producto de escritura (writing).
+```json
+{
+  "items.tags": { 
+    $elemMatch: { 
+      $eq: "writing" 
+    } 
+  } 
+}
+```
+
+8. Buscar las ventas realizadas en la tienda después del 06/03/2015. Mostrar únicamente el correo electrónico y la edad del cliente.
+
+Filter:
+```json
+{
+  "saleDate": {
+    $gte: ISODate("2017-03-06")
+  },
+  "purchaseMethod": "In store"
+}
+```
+Project:
+```json
+{
+  "customer.email": 1, 
+  "customer.age": 1
+}
+```
+
+9. Buscar las ventas de sobres realizadas online después del 14/04/2017. Ordenar las ventas por fecha de venta. Mostrar únicamente la fecha de venta, el correo electrónico y la edad del cliente.
+
+Filter:
+```json
+{
+  "saleDate": {
+    $gte: ISODate("2017-04-14")
+  },
+  "purchaseMethod": "Online"
+}
+```
+Project:
+```json
+{
+  "saleDate": 1,
+  "customer.email": 1,
+  "customer.age": 1
+}
+```
+Sort:
+```json
+{ 
+  "saleDate": 1
+}
+```
