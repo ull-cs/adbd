@@ -17,18 +17,28 @@ public class ErrorMessage {
     }
 
     public int getStatusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     public Date getTimestamp() {
-        return timestamp;
+        return this.timestamp;
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
+
+    @Override
+    public String toString() {
+        return "ErrorMessage=[" + 
+                "id=" + this.statusCode + ", " + 
+                "timestamp=" + this.timestamp + ", " + 
+                "message=" + this.message + ", " + 
+                "description=" + this.description +
+            "]";
+    }      
 }

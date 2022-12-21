@@ -16,7 +16,6 @@ public class Comment {
     private Long id;
     @Lob
     private String content;
-
     // @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tutorial_id", nullable = false)
@@ -43,4 +42,12 @@ public class Comment {
     public void setTutorial(Tutorial tutorial) {
         this.tutorial = tutorial;
     }
+
+    @Override
+    public String toString() {
+        return "Comment=[" + 
+                "id=" + this.id + ", " + 
+                "content=" + this.content + 
+            "]";
+    }    
 }

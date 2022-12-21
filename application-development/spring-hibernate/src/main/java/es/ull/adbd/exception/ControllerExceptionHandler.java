@@ -19,7 +19,6 @@ public class ControllerExceptionHandler {
                 new Date(),
                 ex.getMessage(),
                 request.getDescription(false));
-
         return message;
     }
 
@@ -31,7 +30,6 @@ public class ControllerExceptionHandler {
                 new Date(),
                 ex.getMessage(),
                 request.getDescription(false));
-
         return message;
     }
 }

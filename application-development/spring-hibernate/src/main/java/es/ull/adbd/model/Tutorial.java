@@ -55,6 +55,11 @@ public class Tutorial {
 
     @Override
     public String toString() {
-        return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
+        return "Tutorial=[" + 
+                "id=" + this.id + ", " + 
+                "title=" + this.title + ", " +
+                "description=" + this.description + ", "+
+                "published=" + this.published + 
+            "]";
     }
 }
