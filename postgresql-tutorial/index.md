@@ -168,7 +168,7 @@ PostgreSQL es conocido por su rica variedad de tipos de datos, que van más all�
 - `char(n)`: Cadena de caracteres de longitud fija.
 - `varchar(n)`: Cadena de caracteres de longitud variable.
 - `text`: Cadena de caracteres de longitud variable sin límite.
-5. Fecha y Hora:
+5. Fecha y hora:
 - `date`: Fecha (año, mes, día).
 - `time`: Hora del día.
 - `timestamp`: Fecha y hora.
