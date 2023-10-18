@@ -16,6 +16,7 @@
   - [Actualizar datos](#actualizar-datos)
   - [Eliminar datos](#eliminar-datos)
   - [Cierre de la conexión](#cierre-de-la-conexión)
+  - [Varios](#varios)
 - [Tipos de datos](#tipos-de-datos)
 
 
@@ -150,6 +151,38 @@ Puedes salir de la interfaz de PostgreSQL con:
 ```
 \q
 ```
+## Varios
+
+Listar las bases de datos en el servidor
+```
+$ \l
+```
+Conectar a una base de datos:    
+```
+$ \c dbname username
+```
+Listar las tablas en la base de datos actual:
+```
+$ \dt    
+```
+Ayuda:  
+```
+$ \?
+$ \h nombre comando
+```
+Grabar el histórico de comandos a un fichero
+```
+$ \s
+```
+Ejecutar comandos desde un fichero
+```
+$\i
+```
+Salir:
+```
+\q
+```
+
 
 # Tipos de datos
 
