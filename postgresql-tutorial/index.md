@@ -59,7 +59,7 @@ PostgreSQL se organiza de una manera estructurada y jerárquica que facilita su 
 ## Linux (Ubuntu)
 
 Puedes instalar PostgreSQL en Ubuntu con el siguiente comando:
-```sh
+```shell
 sudo apt update
 sudo apt install postgresql
 ```
@@ -71,7 +71,7 @@ Descarga el instalador oficial de PostgreSQL desde [el sitio web de PostgreSQL](
 ## macOS
 
 Puedes usar Homebrew para instalar PostgreSQL en macOS:
-```sh
+```shell
 brew update
 brew install postgresql
 ```
@@ -82,28 +82,28 @@ brew install postgresql
 
 En la mayoría de los sistemas, PostgreSQL se inicia automáticamente después de la instalación. Si no, puedes iniciar el servicio de PostgreSQL con:
 
-```sh
+```shell
 sudo service postgresql start
 ```
 
 ## Cambiar la contraseña de usuario predeterminada
 
-La instalación de PostgreSQL crea un usuario llamado "postgres". Debes cambiar su contraseña:
-```sh
+La instalación de PostgreSQL crea un usuario llamado `postgres`. Debes cambiar su contraseña:
+```shell
 sudo -u postgres psql
 \password postgres
 ```
 
 # Creación de una base de datos
 
-Para crear una base de datos, usa el comando createdb. Por ejemplo, para crear una base de datos llamada "mi_basededatos", ejecuta:
-```sh
+Para crear una base de datos, usa el comando `createdb`. Por ejemplo, para crear una base de datos llamada `mi_basededatos`, ejecuta:
+```shell
 createdb mi_basededatos
 ```
 # Conexión a la base de datos
 
 Puedes conectarte a la base de datos con el comando psql:
-```sh
+```shell
 psql -d mi_basededatos
 ```
 
@@ -111,8 +111,8 @@ psql -d mi_basededatos
 
 ## Crear una Tabla
 
-Para crear una tabla, usa el comando CREATE TABLE. Por ejemplo:
-```sh
+Para crear una tabla, usa el comando `CREATE TABLE`. Por ejemplo:
+```shell
 CREATE TABLE empleados (
     id serial PRIMARY KEY,
     nombre VARCHAR (50),
