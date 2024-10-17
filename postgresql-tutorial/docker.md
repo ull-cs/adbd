@@ -1,3 +1,14 @@
+- [Usar PostgreSQL mediante Docker](#usar-postgresql-mediante-docker)
+  - [Prerrequisitos](#prerrequisitos)
+  - [Paso 1: Descargar la Imagen de PostgreSQL](#paso-1-descargar-la-imagen-de-postgresql)
+  - [Paso 2: Ejecutar un Contenedor de PostgreSQL](#paso-2-ejecutar-un-contenedor-de-postgresql)
+  - [Paso 3: Crear un Volumen para la Persistencia de Datos](#paso-3-crear-un-volumen-para-la-persistencia-de-datos)
+  - [Paso 4: Conectar a PostgreSQL](#paso-4-conectar-a-postgresql)
+    - [Conectar desde el Contenedor](#conectar-desde-el-contenedor)
+    - [Conectar desde una Aplicación Externa](#conectar-desde-una-aplicación-externa)
+  - [Paso 5: Usar Docker Compose (Opcional)](#paso-5-usar-docker-compose-opcional)
+  - [Paso 6: Detener y Eliminar el Contenedor](#paso-6-detener-y-eliminar-el-contenedor)
+
 # Usar PostgreSQL mediante Docker
 
 Docker es una herramienta muy útil para ejecutar bases de datos como PostgreSQL de manera rápida y sencilla. A continuación, te mostraré cómo puedes configurar y ejecutar PostgreSQL usando Docker.
@@ -34,9 +45,9 @@ docker run --name nombre_del_contenedor -e POSTGRES_PASSWORD=tu_contraseña -d -
 Desglose del comando:
 
 - `--name nombre_del_contenedor`: Especifica un nombre para el contenedor.
-- `-e POSTGRES_PASSWORD=tu_contraseña`: Establece la contraseña del usuario "postgres".
+- `-e POSTGRES_PASSWORD=tu_contraseña`: Establece la contraseña del usuario `postgres`.
 - `-d`: Ejecuta el contenedor en segundo plano.
-- `-p 5432:5432`: Mapea el puerto local 5432 al puerto 5432 del contenedor, que es donde PostgreSQL escucha por defecto.
+- `-p 5432:5432`: Mapea el puerto local `5432` al puerto `5432` del contenedor, que es donde PostgreSQL escucha por defecto.
 
 ## Paso 3: Crear un Volumen para la Persistencia de Datos
 

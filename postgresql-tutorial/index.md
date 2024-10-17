@@ -102,7 +102,7 @@ createdb mi_basededatos
 ```
 # Conexión a la base de datos
 
-Puedes conectarte a la base de datos con el comando psql:
+Puedes conectarte a la base de datos con el comando `psql`:
 ```shell
 psql -d mi_basededatos
 ```
@@ -112,7 +112,7 @@ psql -d mi_basededatos
 ## Crear una Tabla
 
 Para crear una tabla, usa el comando `CREATE TABLE`. Por ejemplo:
-```shell
+```sql
 CREATE TABLE empleados (
     id serial PRIMARY KEY,
     nombre VARCHAR (50),
@@ -121,20 +121,20 @@ CREATE TABLE empleados (
 ```
 ## Insertar datos
 
-Para insertar datos en la tabla, utiliza INSERT INTO:
-```
+Para insertar datos en la tabla, utiliza `INSERT INTO`:
+```sql
 INSERT INTO empleados (nombre, salario) VALUES ('Juan', 50000);
 ```
 ## Consultar datos
 
 Puedes consultar datos utilizando SELECT:
-```
+```sql
 SELECT * FROM empleados;
 ```
 ## Actualizar datos
 
 Para actualizar datos, usa UPDATE:
-```
+```sql
 UPDATE empleados
 SET salario = 55000
 WHERE nombre = 'Juan';
@@ -142,7 +142,7 @@ WHERE nombre = 'Juan';
 ## Eliminar datos
 
 Para eliminar datos, utiliza DELETE:
-```
+```sql
 DELETE FROM empleados WHERE nombre = 'Juan';
 ```
 
