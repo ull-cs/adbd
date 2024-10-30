@@ -1,4 +1,5 @@
-// Documento 1: Registro de un cultivo de papas
+# Documento 1: Registro de un cultivo de papas
+```
 {
     "_id": ObjectId("651a2b47b1f0a12a6c3e6e5f"),
     "tipo_cultivo": "papas",
@@ -11,8 +12,10 @@
         "variedad": "Spunta"
     }
 }
+```
 
-// Documento 2: Registro de un cultivo de plátanos, con datos de monitoreo de crecimiento
+# Documento 2: Registro de un cultivo de plátanos, con datos de monitoreo de crecimiento
+```
 {
     "_id": ObjectId("651a2b47b1f0a12a6c3e6e60"),
     "tipo_cultivo": "plátanos",
@@ -34,8 +37,10 @@
         ]
     }
 }
+```
 
-// Documento 3: Registro de un cultivo de tomates con detalles de fertilización
+# Documento 3: Registro de un cultivo de tomates con detalles de fertilización
+```
 {
     "_id": ObjectId("651a2b47b1f0a12a6c3e6e61"),
     "tipo_cultivo": "tomates",
@@ -58,8 +63,10 @@
         "soporte": "tutor"
     }
 }
+```
 
-// Documento 4: Registro de un cultivo de fresas con datos de control de plagas
+# Documento 4: Registro de un cultivo de fresas con datos de control de plagas
+```
 {
     "_id": ObjectId("651a2b47b1f0a12a6c3e6e62"),
     "tipo_cultivo": "fresas",
@@ -83,3 +90,4 @@
         ]
     }
 }
+```
