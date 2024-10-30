@@ -1,0 +1,47 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+            "tipo_cultivo",
+            "ubicación",
+            "fecha_siembra",
+            "detalles_cultivo"
+        ],
+        "properties": {
+            "tipo_cultivo": {
+                "bsonType": "string"
+            },
+            "ubicación": {
+                "bsonType": "string"
+            },
+            "fecha_siembra": {
+                "bsonType": "date"
+            },
+            "detalles_cultivo": {
+                "bsonType": "object",
+                "properties": {
+                    "variedad": {
+                        "bsonType": "string"
+                    },
+                    "riego": {
+                        "bsonType": "string"
+                    },
+                    "monitoreo_crecimiento": {
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "object",
+                            "properties": {
+                                "fecha": {
+                                    "bsonType": "date"
+                                },
+                                "altura_cm": {
+                                    "bsonType": "int"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
