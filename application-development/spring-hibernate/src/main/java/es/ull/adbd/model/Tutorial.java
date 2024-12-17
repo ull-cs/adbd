@@ -1,6 +1,11 @@
 package es.ull.adbd.model;
 
-import javax.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tutorials")
@@ -55,11 +60,11 @@ public class Tutorial {
 
     @Override
     public String toString() {
-        return "Tutorial=[" + 
-                "id=" + this.id + ", " + 
+        return "Tutorial=[" +
+                "id=" + this.id + ", " +
                 "title=" + this.title + ", " +
-                "description=" + this.description + ", "+
-                "published=" + this.published + 
-            "]";
+                "description=" + this.description + ", " +
+                "published=" + this.published +
+                "]";
     }
 }
