@@ -1,0 +1,34 @@
+services:
+  pgdb:
+    image: postgres:16.3
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: clientesdb
+    volumes:
+      - ./db_data:/var/lib/postgresql/data # Persistencia de los datos
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Script de inicialización de la base de datos
+    networks:
+      - backup_network
+
+  pgbackup:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./backups:/backups  # Almacenamiento de las copias de seguridad en la máquina host
+      - ./pg_backup.sh:/usr/local/bin/pg_backup.sh  # Script de copia
+    environment:
+      - PG_USER=admin
+      - PG_PASSWORD=admin123
+      - PG_HOST=pgdb
+      - PG_DB=clientesdb
+    networks:
+      - backup_network
+    depends_on:
+      - pgdb
+    entrypoint: ["/usr/sbin/crond", "-f"]  # Inicia cron en modo foreground para que el contenedor se ejecute continuamente
+
+networks:
+  backup_network:
+    driver: bridge
